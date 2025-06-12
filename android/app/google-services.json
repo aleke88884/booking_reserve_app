@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "259364057710",
+    "project_id": "bookingreserve-f2f4a",
+    "storage_bucket": "bookingreserve-f2f4a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:259364057710:android:bed3cff548d9ce4afc2c7f",
+        "android_client_info": {
+          "package_name": "com.example.booking_reserv"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBwxaZWkV72JNfbNDlM4MFO3gGZ-IHjtEk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

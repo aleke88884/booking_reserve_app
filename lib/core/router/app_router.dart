@@ -4,13 +4,16 @@ import 'package:booking_reserv/features/favorites/presentation/favorites_screen.
 import 'package:booking_reserv/features/home/presentation/home_screen.dart';
 import 'package:booking_reserv/features/navigation/presentation/navigation_screen.dart';
 import 'package:booking_reserv/features/profile/presentation/profile_screen.dart';
+import 'package:booking_reserv/features/registration/presentation/registration_screen.dart';
+import 'package:booking_reserv/features/book/presentation/booking_details_screen.dart'; // Добавляем импорт
+import 'package:booking_reserv/features/reservation/presentation/reservation_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 class AppRouter {
-  static GoRouter createRouter(bool hasSeeonOnBoarding) {
+  static GoRouter createRouter(bool hasSeenOnBoarding) {
     return GoRouter(
-      initialLocation: AuthScreen.routeName,
+      initialLocation: LoginScreen.routeName,
       routes: [
         ShellRoute(
           builder: (BuildContext context, GoRouterState state, Widget child) =>
@@ -32,11 +35,26 @@ class AppRouter {
               ProfileScreen.routeName,
               (BuildContext context, GoRouterState state) => ProfileScreen(),
             ),
+            _route(
+              BookingDetailsScreen.routeName,
+              (BuildContext context, GoRouterState state) =>
+                  BookingDetailsScreen(
+                booking: state.extra as Booking, // Получаем Booking из extra
+              ),
+            ),
           ],
         ),
         _route(
-          AuthScreen.routeName,
-          (BuildContext context, GoRouterState state) => AuthScreen(),
+          LoginScreen.routeName,
+          (BuildContext context, GoRouterState state) => LoginScreen(),
+        ),
+        _route(
+          RegistrationScreen.routeName,
+          (BuildContext context, GoRouterState state) => RegistrationScreen(),
+        ),
+        _route(
+          ReservationScreen.routeName,
+          (BuildContext context, GoRouterState state) => ReservationScreen(),
         ),
       ],
     );

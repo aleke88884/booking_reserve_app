@@ -136,7 +136,6 @@ class FavoriteCard extends StatelessWidget {
                       icon:
                           Icon(Icons.favorite, color: Colors.red, size: 24.sp),
                       onPressed: () {
-                        // TODO: Implement remove from favorites
                         ScaffoldMessenger.of(context).showSnackBar(
                           SnackBar(
                               content: Text(
